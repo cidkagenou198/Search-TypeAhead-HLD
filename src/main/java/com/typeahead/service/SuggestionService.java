@@ -29,6 +29,7 @@ public class SuggestionService {
 
     public List<QueryResult> getSuggestions(String prefix) {
         prefix = prefix.trim().toLowerCase();
+        if (prefix.length() < 3) return List.of();
 
         List<QueryResult> cached = cacheService.get(prefix);
         if (cached != null) {
@@ -42,6 +43,7 @@ public class SuggestionService {
 
     public List<QueryResult> getTrendingSuggestions(String prefix) {
         prefix = prefix.trim().toLowerCase();
+        if (prefix.length() < 3) return List.of();
         List<QueryResult> results = queryRepository.getSuggestionsWithRecency(prefix);
         return trendingService.sortByTrending(results, 10);
     }

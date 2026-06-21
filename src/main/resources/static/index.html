@@ -64,7 +64,7 @@
   input.addEventListener("input", () => {
     clearTimeout(debounceTimer);
     const q = input.value.trim();
-    if (!q) { suggestionsBox.style.display = "none"; return; }
+    if (q.length < 3) { suggestionsBox.style.display = "none"; return; }
     debounceTimer = setTimeout(() => fetchSuggestions(q), 200);
   });
 
