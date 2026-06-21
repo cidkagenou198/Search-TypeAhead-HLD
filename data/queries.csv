@@ -1,0 +1,128 @@
+query,count
+iphone 15,15000
+iphone 15 pro,12000
+iphone 15 pro max,10000
+iphone 14,8000
+iphone 14 pro,7000
+ipad pro,6500
+ipad air,5500
+ipad mini,4000
+apple watch,9000
+apple watch ultra,6000
+apple watch series 9,7500
+macbook pro,11000
+macbook air,9500
+mac mini,5000
+imac,8500
+airpods pro,12000
+airpods,10000
+airpods max,4500
+samsung galaxy s24,8000
+samsung galaxy s24 ultra,11000
+samsung galaxy s24 plus,6000
+samsung galaxy s23,9000
+samsung galaxy s23 ultra,10000
+samsung galaxy tab s9,5500
+samsung galaxy tab s9 ultra,4500
+samsung galaxy watch 6,5000
+samsung galaxy buds,3500
+google pixel 8,6000
+google pixel 8 pro,7000
+google pixel 8a,4000
+google pixel watch,3000
+google pixel buds,2500
+oneplus 12,5500
+oneplus 12r,3500
+oneplus open,4500
+oneplus nord,3000
+xiaomi 14,4000
+xiaomi 14 pro,4500
+xiaomi redmi note 13,5000
+sony wh-1000xm5,7000
+sony wh-1000xm4,5500
+sony wf-1000xm5,6000
+sony a7 iv,3500
+sony a7 iii,4000
+nintendo switch,8000
+nintendo switch oled,6500
+nintendo switch lite,3000
+playstation 5,12000
+playstation 5 slim,8000
+xbox series x,7000
+xbox series s,4500
+xbox game pass,3500
+netflix subscription,5000
+netflix premium,3000
+spotify premium,4500
+spotify family,2500
+youtube premium,3500
+youtube tv,2000
+amazon prime,6000
+amazon prime video,4000
+disney plus,4500
+hbo max,3500
+hulu subscription,2500
+apple tv plus,2000
+peacock tv,1500
+paramount plus,1500
+best laptop for programming,3000
+best laptop for gaming,5000
+best laptop for video editing,2500
+best phone under 50000,3500
+best phone under 30000,4000
+best phone under 100000,2500
+best wireless earbuds,4500
+best noise cancelling headphones,3500
+best smartwatch,4000
+best tablet for students,3000
+best tablet for drawing,2000
+how to learn python,6000
+how to learn java,4500
+how to learn javascript,5000
+how to learn react,4000
+how to learn machine learning,5500
+how to learn data science,3500
+how to learn web development,3000
+how to learn android development,2500
+how to tie a tie,2000
+how to make pancakes,3000
+how to cook rice,2500
+how to lose weight,7000
+how to gain muscle,5000
+how to sleep better,4000
+how to meditate,3000
+weather in new york,3500
+weather in london,3000
+weather in tokyo,2500
+weather in paris,2000
+weather in dubai,3000
+news today,8000
+news india,6000
+news technology,4500
+news sports,3500
+news entertainment,3000
+stock market today,5500
+stock market news,4000
+apple stock,6000
+google stock,4500
+amazon stock,5000
+microsoft stock,5500
+tesla stock,7000
+nvidia stock,8000
+bitcoin price,6500
+ethereum price,4500
+cryptocurrency news,5000
+chatgpt,10000
+chat gpt login,8000
+chat gpt 4,6000
+chat gpt app,4500
+chat gpt plus,3500
+bard ai,3000
+copilot microsoft,3500
+github copilot,4000
+stack overflow,4500
+leetcode,6000
+leetcode problems,3500
+leetcode premium,2500
+hackerrank,3000
+codeforces,2000

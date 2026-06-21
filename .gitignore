@@ -1,0 +1,7 @@
+target/
+*.db
+*.log
+*.err
+.idea/
+*.iml
+.vscode/
