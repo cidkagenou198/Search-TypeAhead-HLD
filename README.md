@@ -1,6 +1,10 @@
 # Search Typeahead System — API Documentation
 
-Uploading Screen Recording 2026-06-21 221910.mp4…
+
+
+https://github.com/user-attachments/assets/4f74c8ca-d97a-47c7-b67a-df6953768bc1
+
+
 
 <img width="1909" height="1033" alt="image" src="https://github.com/user-attachments/assets/380211e1-f34a-4630-a5cd-e4c1fdea678d" />
 <img width="690" height="665" alt="image" src="https://github.com/user-attachments/assets/19ae006a-6625-4489-832d-0876f18d10c8" />
