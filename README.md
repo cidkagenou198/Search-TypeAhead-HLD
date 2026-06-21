@@ -9,16 +9,18 @@
 
 1. Start 3 Redis nodes:
    docker run -d -p 6379:6379 redis
+   
    docker run -d -p 6380:6380 redis --port 6380
+   
    docker run -d -p 6381:6381 redis --port 6381
 
-2. Load the dataset (run once):
+3. Load the dataset (run once):
    mvn compile exec:java -Dexec.mainClass="com.typeahead.DatasetLoader"
 
-3. Start the server:
+4. Start the server:
    mvn spring-boot:run
 
-4. Open browser:
+5. Open browser:
    http://localhost:8080
 
 ## APIs
