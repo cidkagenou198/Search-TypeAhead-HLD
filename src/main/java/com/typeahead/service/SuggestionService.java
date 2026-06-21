@@ -27,19 +27,17 @@ public class SuggestionService {
         this.batchWriterService = batchWriterService;
     }
 
-    public Map<String, Object> getSuggestions(String prefix) {
+    public List<QueryResult> getSuggestions(String prefix) {
         prefix = prefix.trim().toLowerCase();
 
         List<QueryResult> cached = cacheService.get(prefix);
         if (cached != null) {
-            return Map.of("suggestions", cached, "source", "cache");
+            return cached;
         }
 
         List<QueryResult> results = queryRepository.getSuggestions(prefix, 10);
-
         cacheService.set(prefix, results);
-
-        return Map.of("suggestions", results, "source", "db");
+        return results;
     }
 
     public List<QueryResult> getTrendingSuggestions(String prefix) {

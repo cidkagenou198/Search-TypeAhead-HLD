@@ -27,7 +27,6 @@
       color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem;
     }
     #result-msg { margin-top: 14px; color: green; font-size: 0.9rem; }
-    #source-info { margin-top: 6px; color: #888; font-size: 0.8rem; }
     h2 { margin-top: 40px; font-size: 1.1rem; }
     #trending-list { list-style: none; padding: 0; }
     #trending-list li {
@@ -48,7 +47,6 @@
 
 <button id="search-btn">Search</button>
 <div id="result-msg"></div>
-<div id="source-info"></div>
 
 <h2>Trending Searches</h2>
 <ul id="trending-list"></ul>
@@ -74,8 +72,7 @@
     try {
       const res = await fetch(`/suggest?q=${encodeURIComponent(q)}`);
       const data = await res.json();
-      sourceInfo.textContent = `Source: ${data.source}`;
-      renderSuggestions(data.suggestions);
+      renderSuggestions(data);
     } catch (e) { console.error(e); }
   }
 
@@ -112,7 +109,11 @@
   async function submitSearch(query) {
     if (!query) return;
     try {
-      const res = await fetch(`/search?q=${encodeURIComponent(query)}`, { method: "POST" });
+      const res = await fetch("/search", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ query })
+      });
       const data = await res.json();
       resultMsg.textContent = `Response: "${data.message}"`;
       suggestionsBox.style.display = "none";
@@ -125,7 +126,7 @@
       const res = await fetch("/trending");
       const data = await res.json();
       trendingList.innerHTML = "";
-      data.trending.forEach(item => {
+      data.forEach(item => {
         const li = document.createElement("li");
         li.innerHTML = `<span>${item.query}</span>
                         <span class="trend-count">${item.count.toLocaleString()} searches</span>`;

@@ -1,5 +1,7 @@
 package com.typeahead.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class QueryResult {
 
     private String query;
@@ -24,6 +26,7 @@ public class QueryResult {
     public double getLastSearched() { return lastSearched; }
     public void setLastSearched(double lastSearched) { this.lastSearched = lastSearched; }
 
+    @JsonProperty("trendingScore")
     public double getScore() { return score; }
     public void setScore(double score) { this.score = score; }
 }

@@ -100,9 +100,8 @@ public class CacheService {
 
         return Map.of(
             "prefix", prefix,
-            "cacheKey", cacheKey,
-            "nodeIndex", nodeIndex,
-            "hit", hit
+            "assignedNode", "cache-node-" + nodeIndex,
+            "status", hit ? "HIT" : "MISS"
         );
     }
 }
