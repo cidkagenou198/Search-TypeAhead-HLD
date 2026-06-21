@@ -1,5 +1,14 @@
 # Search Typeahead System — API Documentation
 
+Uploading Screen Recording 2026-06-21 221910.mp4…
+
+<img width="1909" height="1033" alt="image" src="https://github.com/user-attachments/assets/380211e1-f34a-4630-a5cd-e4c1fdea678d" />
+<img width="690" height="665" alt="image" src="https://github.com/user-attachments/assets/19ae006a-6625-4489-832d-0876f18d10c8" />
+<img width="841" height="349" alt="image" src="https://github.com/user-attachments/assets/0d6eb50a-0c5c-477a-85df-b39700d19eaf" />
+<img width="806" height="198" alt="image" src="https://github.com/user-attachments/assets/e1c49056-d9ee-4356-83df-0c178a53db41" />
+<img width="709" height="187" alt="image" src="https://github.com/user-attachments/assets/71fb6a9e-4310-409d-bff8-b00af0275ffb" />
+
+
 **Base URL:** `http://localhost:8080`
 *(Use `http://localhost:8000` if running the Python/FastAPI version instead.)*
 
@@ -390,7 +399,7 @@ The counters live in `CacheService.java`:
 
 ---
 
-## 8. Viva Demo Script (Redis-specific)
+## 8.Demo Script (Redis-specific)
 
 A clean order to demonstrate this part live:
 
