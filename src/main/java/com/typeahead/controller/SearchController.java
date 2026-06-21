@@ -1,6 +1,5 @@
 package com.typeahead.controller;
 
-import com.typeahead.model.QueryResult;
 import com.typeahead.service.SuggestionService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -52,6 +51,11 @@ public class SearchController {
     @GetMapping("/cache/debug")
     public Map<String, Object> cacheDebug(@RequestParam String prefix) {
         return suggestionService.getCacheDebug(prefix);
+    }
+
+    @GetMapping("/cache/stats")
+    public Map<String, Object> cacheStats() {
+        return suggestionService.getCacheStats();
     }
 
     @GetMapping("/trending")

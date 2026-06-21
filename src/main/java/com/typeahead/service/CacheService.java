@@ -14,6 +14,7 @@ import java.security.MessageDigest;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicLong;
 
 @Service
 public class CacheService {
@@ -26,6 +27,9 @@ public class CacheService {
 
     private List<JedisPool> redisPools;
     private final ObjectMapper objectMapper = new ObjectMapper();
+
+    private final AtomicLong hitCount = new AtomicLong(0);
+    private final AtomicLong missCount = new AtomicLong(0);
 
     @PostConstruct
     public void init() {
@@ -59,14 +63,29 @@ public class CacheService {
         try (Jedis jedis = getPool(cacheKey).getResource()) {
             String val = jedis.get(cacheKey);
             if (val != null) {
+                hitCount.incrementAndGet();
                 System.out.println("[CACHE HIT] prefix='" + prefix + "' node=" + getNodeIndex(cacheKey));
                 return objectMapper.readValue(val, new TypeReference<List<QueryResult>>() {});
             }
         } catch (Exception e) {
             System.err.println("[CACHE] Read error: " + e.getMessage());
         }
+        missCount.incrementAndGet();
         System.out.println("[CACHE MISS] prefix='" + prefix + "' node=" + getNodeIndex(cacheKey));
         return null;
+    }
+
+    public Map<String, Object> getStats() {
+        long hits = hitCount.get();
+        long misses = missCount.get();
+        long total = hits + misses;
+        double hitRate = total == 0 ? 0.0 : (double) hits / total * 100.0;
+        return Map.of(
+            "hits", hits,
+            "misses", misses,
+            "total", total,
+            "hitRatePercent", Math.round(hitRate * 100.0) / 100.0
+        );
     }
 
     public void set(String prefix, List<QueryResult> suggestions) {

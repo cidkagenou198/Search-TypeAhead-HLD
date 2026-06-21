@@ -60,4 +60,8 @@ public class SuggestionService {
     public Map<String, Object> getCacheDebug(String prefix) {
         return cacheService.getDebugInfo(prefix);
     }
+
+    public Map<String, Object> getCacheStats() {
+        return cacheService.getStats();
+    }
 }
